@@ -6,7 +6,10 @@ A simple, stylish calculator built with HTML, CSS, and JavaScript.
 
 - Basic arithmetic operations: addition, subtraction, multiplication, division
 - Responsive and modern UI
-- Result sound effect when calculation is complete
+
+## Live Demo
+
+[**Try the Calculator Online**](https://calculator-phi-two-40.vercel.app/)
 
 ## Usage
 
@@ -34,7 +37,7 @@ calculator/
 ## How It Works
 
 - Click the calculator buttons to enter numbers and operations.
-- Press `=` to see the result and hear a sound.
+- Press `=` to see the result.
 - Press `C` to clear the display.
 
 ## Credits
