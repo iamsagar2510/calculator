@@ -3,14 +3,6 @@ const buttons = document.querySelectorAll('.btn');
 let currentInput = '';
 let resultDisplayed = false;
 
-const audio = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
-audio.preload = 'auto';
-
-function playAudio() {
-    audio.currentTime = 0;
-    audio.play();
-}
-
 function updateDisplay(value) {
     display.value = value;
 }
@@ -30,7 +22,6 @@ buttons.forEach(button => {
                     updateDisplay(evalResult);
                     currentInput = evalResult.toString();
                     resultDisplayed = true;
-                    playAudio();
                 }
             } catch {
                 updateDisplay('Error');

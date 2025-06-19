@@ -4,20 +4,39 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', monospace;
+    /* Subtle math symbols background */
+    position: relative;
+}
+
+body::before {
+    content: "π ∑ ∫ √ ∞ ∆ ≈ ≠ ≤ ≥ ± × ÷";
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100vw;
+    font-size: 7vw;
+    color: rgba(255,255,255,0.04);
+    text-align: center;
+    letter-spacing: 2vw;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
 }
 
 .calculator {
-    background: #22223b;
-    border-radius: 18px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.18);
     padding: 2.5rem 2rem 2rem 2rem;
     width: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #4e54c8;
+    border: 2px solid #0f2027;
+    position: relative;
+    z-index: 1;
 }
 
 .calculator-display {
@@ -25,15 +44,17 @@ body {
     height: 60px;
     border: none;
     border-radius: 10px;
-    background: #4e54c8;
+    background: #e3eafc;
     margin-bottom: 1.5rem;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     text-align: right;
     padding: 0 1rem;
     box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
-    color: #fff;
+    color: #0f2027;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: inherit;
+    outline: none;
 }
 
 .calculator-buttons {
@@ -44,7 +65,7 @@ body {
 }
 
 .btn {
-    background: #f2e9e4;
+    background: #f5f7fa;
     border: none;
     border-radius: 8px;
     font-size: 1.3rem;
@@ -52,55 +73,57 @@ body {
     cursor: pointer;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 6px rgba(44, 62, 80, 0.07);
-    color: #22223b;
-    font-weight: 500;
+    color: #0f2027;
+    font-weight: 600;
+    font-family: inherit;
 }
 
 .btn:active {
-    background: #a3cef1;
-    color: #22223b;
+    background: #a1c4fd;
+    color: #0f2027;
 }
 
 .operator {
-    background: #9f86c0;
+    background: #2c5364;
     color: #fff;
     font-weight: bold;
 }
 
 .operator:active {
-    background: #5e60ce;
-    color: #fff;
+    background: #0f2027;
+    color: #a1c4fd;
 }
 
 .equal {
     grid-column: span 4;
-    background: linear-gradient(90deg, #4e54c8 0%, #667eea 100%);
+    background: linear-gradient(90deg, #0f2027 0%, #a1c4fd 100%);
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 0.5rem;
     padding: 1rem 0;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(76, 84, 200, 0.12);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+    letter-spacing: 2px;
 }
 
 .equal:active {
-    background: #22223b;
-    color: #fff;
+    background: #a1c4fd;
+    color: #0f2027;
 }
 
 #clear {
-    background: #f28482;
+    background: #ff4e50;
     color: #fff;
     font-weight: bold;
 }
 
 #clear:active {
-    background: #c9184a;
-    color: #fff;
+    background: #fff;
+    color: #ff4e50;
 }
 
 .btn:focus {
-    outline: 2px solid #4e54c8;
+    outline: 2px solid #2c5364;
     outline-offset: 2px;
 }
