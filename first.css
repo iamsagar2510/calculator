@@ -1,0 +1,106 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.calculator {
+    background: #22223b;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.18);
+    padding: 2.5rem 2rem 2rem 2rem;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #4e54c8;
+}
+
+.calculator-display {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background: #4e54c8;
+    margin-bottom: 1.5rem;
+    font-size: 2.1rem;
+    text-align: right;
+    padding: 0 1rem;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.calculator-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.btn {
+    background: #f2e9e4;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(44, 62, 80, 0.07);
+    color: #22223b;
+    font-weight: 500;
+}
+
+.btn:active {
+    background: #a3cef1;
+    color: #22223b;
+}
+
+.operator {
+    background: #9f86c0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.operator:active {
+    background: #5e60ce;
+    color: #fff;
+}
+
+.equal {
+    grid-column: span 4;
+    background: linear-gradient(90deg, #4e54c8 0%, #667eea 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    padding: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(76, 84, 200, 0.12);
+}
+
+.equal:active {
+    background: #22223b;
+    color: #fff;
+}
+
+#clear {
+    background: #f28482;
+    color: #fff;
+    font-weight: bold;
+}
+
+#clear:active {
+    background: #c9184a;
+    color: #fff;
+}
+
+.btn:focus {
+    outline: 2px solid #4e54c8;
+    outline-offset: 2px;
+}
