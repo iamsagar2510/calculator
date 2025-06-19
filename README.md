@@ -39,7 +39,6 @@ calculator/
 
 ## Credits
 
-- Button sound from [SoundJay](https://www.soundjay.com/buttons/sounds/button-16.mp3)
 - UI inspired by modern calculator designs
 
 ---
